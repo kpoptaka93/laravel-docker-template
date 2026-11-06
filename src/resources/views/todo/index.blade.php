@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </head>
-<body>
   <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
       <div class="container">
@@ -33,6 +32,11 @@
                 ToDo一覧
               </div>
               <div class="list-group list-group-flush">
+                @foreach ($todos as $todo)
+                  <div class="d-flex align-items-center p-2">
+                    <span class="col-9">{{ $todo->content }}</span>
+                  </div>
+                @endforeach
               </div>
             </div>
           </div>
@@ -41,4 +45,4 @@
     </main>
   </div>
 </body>
-</html>
+
